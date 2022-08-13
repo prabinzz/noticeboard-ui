@@ -6,7 +6,16 @@ import App from "./App";
 import { store } from "./store";
 
 import { Provider } from "react-redux";
+import { saveState } from "./browserStorage";
+import { debounce } from "debounce";
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+store.subscribe(() => {
+  debounce(() => {
+    saveState(store.getState());
+  }, 800);
+});
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
