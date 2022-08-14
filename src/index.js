@@ -11,9 +11,7 @@ import { debounce } from "debounce";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 store.subscribe(() => {
-  debounce(() => {
-    saveState(store.getState());
-  }, 800);
+  saveState(store.getState());
 });
 
 root.render(

@@ -25,9 +25,17 @@ export const LoginSlice = createSlice({
       state.isLoading = false;
       state.error = action.payload;
     },
+    logout: (state) => {
+      state.isLoading = false;
+      state.isAuth = false;
+      state.error = "";
+      state.jwt = "";
+      state.user = {};
+    },
   },
 });
 
-export const { loginPending, loginSuccess, loginFaild } = LoginSlice.actions;
+export const { loginPending, loginSuccess, loginFaild, logout } =
+  LoginSlice.actions;
 
 export default LoginSlice.reducer;
