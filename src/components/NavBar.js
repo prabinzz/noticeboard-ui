@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const login = useSelector((state) => state.login);
-  console.log(login);
   return (
     <nav className="w-full flex justify-between h-16 bg-slate-300 items-center px-10">
       <div className="text-2xl">LOGO</div>
