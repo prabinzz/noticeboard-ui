@@ -1,12 +1,12 @@
 import React from "react";
-import AddTable from "../components/AddTable";
+import AddForm from "../components/AddForm";
 import NavBar from "../components/NavBar";
 
 const Admin = () => {
   return (
     <div>
       <NavBar />
-      <AddTable />
+      <AddForm />
     </div>
   );
 };
